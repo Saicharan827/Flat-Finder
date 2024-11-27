@@ -1,0 +1,100 @@
+
+.add-property {
+    font-size:120%;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #1c1919;
+    border-radius: 5px;
+    background-color: #ddd9d9;
+  }
+  
+  .add-property label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+  }
+  
+  .add-property input,
+  .add-property select,
+  .add-property button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #222222;
+  }
+  
+  .add-property button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .property-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .property-card {
+    display: flex;
+    padding: 15px;
+    border: 1px solid #a7a4a4;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .property-image {
+    width: 66%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .property-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .property-info h3 {
+    margin: 0 0 10px;
+
+  }
+  
+  .property-info p {
+    margin: 5px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(27, 42, 42);
+  }
+  
+  .wishlist-button,
+  .contact-button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #da9090;
+  }
+  
+  .wishlist-button {
+    background-color: #4e161d;
+    color: white;
+  }
+  
+  .contact-button {
+    background-color: #1b6e2f;
+    color: white;
+  }
+  

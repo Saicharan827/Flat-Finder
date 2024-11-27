@@ -1,0 +1,136 @@
+.home {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; 
+   
+  
+  }
+  
+  .search-bar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-bar button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-item label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .filter-item input, .filter-item select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .home {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .property-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .property-card {
+    display: flex;
+    width: 90%; 
+    max-width: 800px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+  }
+  
+  .property-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .property-image {
+
+    object-fit:cover;
+  }
+  
+  .property-info {
+    width: 34%; 
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .property-info h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  .property-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .contact-button,
+  .wishlist-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .wishlist-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  
+  .contact-button:hover,
+  .wishlist-button:hover {
+    background-color: #555;
+  }
+  
