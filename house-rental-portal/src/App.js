@@ -6,8 +6,8 @@ import AddProperty from './components/AddProperty';
 import Wishlist from './components/Wishlist';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import Register from './components/register'; // 👈 Add this line
 import PropertyDetail from './components/PropertyDetail';
-
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,9 +24,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/add-property" element={<AddProperty />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/Login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/register" element={<Register />} /> {/* 👈 Add this route */}
         <Route path="/logout" element={<Logout setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/property/:id" element={<PropertyDetail /> } />
+        <Route path="/property/:id" element={<PropertyDetail />} />
       </Routes>
     </Router>
   );

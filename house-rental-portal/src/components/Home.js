@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
     maxPrice: '',
     roomsAvailable: '',
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchProperties() {
@@ -39,7 +41,15 @@ function Home() {
       [name]: value,
     });
   };
-
+  const handleViewDetails = (propertyId) => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Please log in to view property details.');
+      navigate('/login'); // redirect to login
+    } else {
+      navigate(`/property/${propertyId}`);
+    }
+  };
   const handleAddToWishlist = async (propertyId) => {
     const token = localStorage.getItem('token');
   
@@ -156,16 +166,19 @@ function Home() {
       <div className="property-list">
         {filteredProperties.map((property) => (
           <div key={property.id} className="property-card">
-            <img src={`http://localhost:5000${property.images}`} alt="House" className="property-image" />
+            <img src={`https://flat-finder-qnkc.onrender.com${property.images}`} alt="House" className="property-image" />
             <div className="property-info">
               <h3>Location: {property.location}</h3>
               <p>Price: {property.price}</p>
               <p>Type: {property.roomsAvailable}BHK</p>
               
 
-              <Link to={`/property/${property._id}`}>
-               <button className="contact-button">View Details</button>
-              </Link>
+              <button 
+  className="contact-button" 
+  onClick={() => handleViewDetails(property._id)}
+>
+  View Details
+</button>
               <button 
                 className="wishlist-button" 
                 onClick={() => handleAddToWishlist(property._id)}

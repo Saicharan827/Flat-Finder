@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // ✅ Import Link
 import './Login.css'; 
 
 function Login({ setIsLoggedIn }) {
@@ -34,7 +34,7 @@ function Login({ setIsLoggedIn }) {
   return (
     <div className="login-clean">
       <div className="illustration">
-        <i className="fa fa-user"></i> {}
+        <i className="fa fa-user"></i>
       </div>
       <form onSubmit={handleSubmit}>
         <input
@@ -53,6 +53,12 @@ function Login({ setIsLoggedIn }) {
         />
         <button type="submit" className="btn-primary">Login</button>
         <a href="#" className="forgot">Forgot your password?</a>
+
+        {/* ✅ Register link section */}
+        <div className="signup-link">
+          <span>Don't have an account? </span>
+          <Link to="/register">Register here</Link>
+        </div>
       </form>
     </div>
   );
