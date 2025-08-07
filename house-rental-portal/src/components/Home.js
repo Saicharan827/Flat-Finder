@@ -17,7 +17,7 @@ function Home() {
   useEffect(() => {
     async function fetchProperties() {
       try {
-        const response = await fetch('http://localhost:5000/api/properties');
+        const response = await fetch('https://flat-finder-qnkc.onrender.com/api/properties');
         const data = await response.json();
         setProperties(data);
       } catch (error) {
@@ -51,7 +51,7 @@ function Home() {
     console.log("Property ID to be added to wishlist:", propertyId); 
     
     try {
-      const response = await fetch('http://localhost:5000/api/wishlist/add', {
+      const response = await fetch('https://flat-finder-qnkc.onrender.com/api/wishlist/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
