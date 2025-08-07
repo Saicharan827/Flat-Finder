@@ -17,7 +17,7 @@ function Wishlist() {
   
     const fetchWishlist = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/wishlist', {
+        const response = await fetch('https://flat-finder-qnkc.onrender.com/api/wishlist', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function Wishlist() {
       <div className="wishlist-container">
         {wishlist.map((property) => (
           <div key={property._id} className="wishlist-item">
-            <img src={`http://localhost:5000${property.images}`} alt={property.name} className="wishlist-image" />
+            <img src={`https://flat-finder-qnkc.onrender.com${property.images}`} alt={property.name} className="wishlist-image" />
             <div className="wishlist-info">
               <h3>{property.name}</h3>
               <p><strong>Location:</strong> {property.location}</p>
