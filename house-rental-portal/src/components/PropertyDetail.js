@@ -16,7 +16,7 @@ function PropertyDetail() {
           throw new Error('Property ID is missing');
         }
 
-        const response = await fetch(`http://localhost:5000/api/properties/${id}`);
+        const response = await fetch(`https://flat-finder-qnkc.onrender.com/api/properties/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch property');
         }
@@ -86,7 +86,7 @@ function PropertyDetail() {
       {/* Property Image Section */}
       <div className="property-image-container">
         <img
-          src={`http://localhost:5000${property.images}`}
+          src={`https://flat-finder-qnkc.onrender.com${property.images}`}
           alt="Property"
           className="property-image"
         />
